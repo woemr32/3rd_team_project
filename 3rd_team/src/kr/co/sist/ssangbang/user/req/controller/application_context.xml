@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- 1. Datasource 설정  -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@211.63.89.158:1521:orcl"/>
+		<property name="username" value="scott"/>
+		<property name="password" value="tiger"/>
+	</bean>
+	
+	<!-- 2. DAO에서 사용할 jdbcTemplate 설정(의존성주입) -->
+	<!-- <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"/>
+	</bean> -->
+
+	<!-- 3. DAO 생성(의존성주입), Service 생성(의존성주입)
+		 @Autowried 이용  -->
+	<context:annotation-config/>
+	<!-- <context:component-scan base-package="kr.co.sist.dao"/>
+	<context:component-scan base-package="kr.co.sist.dao.*"/>
+	<context:component-scan base-package="kr.co.sist.service"/>
+	<context:component-scan base-package="kr.co.sist.service.*"/> -->
+
+</beans>
