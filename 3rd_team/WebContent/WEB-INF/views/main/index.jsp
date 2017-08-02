@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>DateCuration</title>
 
-<link href="common/css/stylesheet.css" type="text/css" rel="stylesheet" />
+<link href="http://localhost:8080/3rd_team/common/css/stylesheet.css" type="text/css" rel="stylesheet" />
 <style type="text/css"></style>
 
 <script type="text/javascript" src="http://localhost:8080/3rd_team/common/js/jquery-1.12.0.js"></script>
