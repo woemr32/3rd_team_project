@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head> 
@@ -46,11 +46,10 @@
     </div><!--div#filter-->
     <div id="content">
     
-    	<!------------------
-    		MAP 추가  
-		-------------------->
+<!-- map -->
+		<c:import url="http://localhost:8080/3rd_team/WEB-INF/views/main/map.jsp"/>    	
+    	
         <div id="map-component">
-        	map 
         </div><!-- div#map-component -->
         
         <div id="list-component">
