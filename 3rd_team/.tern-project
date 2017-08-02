@@ -1,0 +1,13 @@
+{
+  "plugins": {
+    "guess-types": {
+      
+    }
+  },
+  "libs": [
+    "ecma5",
+    "browser",
+    "jquery"
+  ],
+  "ecmaVersion": 6
+}
