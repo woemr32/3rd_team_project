@@ -1,10 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<html>
-	<head>
-	</head>
-<body>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Marker Clustering</title>
@@ -14,12 +9,12 @@
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map-component'), {
           zoom: 17,
-          center: {lat: 37.497, lng: 127.0254}
+          center: {lat:37.498771, lng:127.030088}
         });
 
 
         
-       var locations = [{lat: 37.497, lng: 127.0254}];
+       var locations = [{lat: 37.498146, lng:127.027578}];
 
  
         // Add some markers to the map.
@@ -60,7 +55,7 @@
       function test(){
     	  var map = new google.maps.Map(document.getElementById('map-component'), {
               zoom: 17,
-              center: {lat: 37.497, lng: 127.0254}
+              center: {lat:37.498771, lng:127.030088}
             });
     	 alert( locations.length )
    	   var markers = locations.map(function(location, i) {
@@ -80,6 +75,4 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdDL53okfssfGHZbWuR1WN2ATA9n8ZbbE&callback=initMap">
     </script>
-</body>
-</html>
 

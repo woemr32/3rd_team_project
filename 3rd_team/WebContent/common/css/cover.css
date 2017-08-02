@@ -15,12 +15,17 @@ header{
 	height: 64px;
 }
 
-.top_logo, .bottom_logo{
-	cursor: pointer;
+
+.ptext{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	font-size: 27px;
+	text-align: center;	
 }
 
-.top_logo, .bottom_logo:hover{
-	background-color: pink;
+.top_logo, .bottom_logo{
+	cursor: pointer;
 }
 
 .top_logo, .bottom_logo:active{
@@ -69,23 +74,6 @@ header{
 
 .section-dark{
 	background-color: #282e34;
-}
-
-.ptext{
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	color: #000;
-	font-size: 27px;
-	letter-spacing: 8px;
-	text-transform: uppercase;
-	text-align: center;	
-}
-
-.ptext .border{
-	background-color: transparent;
-	color: #FFF;
-	padding: 20px;	
 }
 
 @media(max-width:568px){
