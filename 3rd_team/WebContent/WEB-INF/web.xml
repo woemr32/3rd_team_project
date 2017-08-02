@@ -29,5 +29,20 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping> 
+	
+	<!-- 요청에 대한 한글을 처리하는 filter를 등록 -->
+	  <filter>
+	  	<filter-name>cef</filter-name>
+	  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+	  	<init-param>
+	  		<param-name>encoding</param-name>
+	  		<param-value>UTF-8</param-value>
+	  	</init-param>
+	  </filter>
+	  <filter-mapping>
+	  	<filter-name>cef</filter-name>
+	  	<url-pattern>*.do</url-pattern>
+	  </filter-mapping>
+	
 
 </web-app>
