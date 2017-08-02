@@ -52,7 +52,7 @@
         <div id="map-component">
         	map 
         </div><!-- div#map-component -->
-        
+         
         <div id="list-component">
         	<a href="#"><span id="list_close_icon"><<</span></a>
             <div class="list_header">>> 검색결과 00건</div>
