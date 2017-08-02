@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- 1. DB 연동 DataSource 설정  -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@211.63.89.158:1521:orcl"/>
+		<property name="username" value="jaeho"/>
+		<property name="password" value="tiger"/>
+	</bean>
+	
+	<!-- 2. Spring MyBatis Builder 생성
+		 의존성 주입 : SqlSessionFactoryBean 에 dataSource 의존성 주입 -->
+	<bean id="ssfb" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation" value="/WEB-INF/spring/mybatis/mybatis_config.xml"/>
+	</bean>
+	
+	<!-- 3. MyBatis Handler 생성
+		의존성 주입 : SqlSessionTemplate 에 SqlSessionFactoryBean 을 의존성 주입  -->
+	<bean id="sst" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="ssfb"/>
+	</bean>
+		
 		
 </beans>
