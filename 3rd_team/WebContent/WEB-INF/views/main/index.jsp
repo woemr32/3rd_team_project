@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head> 
 <meta charset="UTF-8">
 <title>DateCuration</title>
 
-<link href="common/css/stylesheet.css" type="text/css" rel="stylesheet" />
+<link href="http://localhost:8080/3rd_team/common/css/stylesheet.css" type="text/css" rel="stylesheet" />
 <style type="text/css"></style>
 
 <script type="text/javascript" src="http://localhost:8080/3rd_team/common/js/jquery-1.12.0.js"></script>
@@ -19,7 +19,7 @@
 <div id="wrap"> 
     
 <div id="header">
-    <div id="logo"><a href="#"><img alt="쌍방로고" title="쌍방메인" src="http://localhost:8080/3rd_team/common/images/logo_168x60.png"/></a></div>
+    <div id="logo"><a href="#"><img alt="쌍방로고" title="쌍방메인" src="http://localhost:8080/3rd_team/common/images/main/logo_168x60.png"/></a></div>
     
     <div id="nav">
     	<span class="nav_btn"><a href="#">지도검색</a></span>
@@ -46,11 +46,10 @@
     </div><!--div#filter-->
     <div id="content">
     
-    	<!------------------
-    		MAP 추가  
-		-------------------->
+<!-- map -->
+		<c:import url="http://localhost:8080/3rd_team/common/map/map.jsp"/>    	
+    	
         <div id="map-component">
-        	map 
         </div><!-- div#map-component -->
         
         <div id="list-component">
