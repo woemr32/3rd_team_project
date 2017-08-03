@@ -1,0 +1,21 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.ssangbang.user.board.search">
+	
+<!--   	<select id="selectAllStore" resultType="kr.co.sist.ssangbang.user.board.domain.AllStoreDomain">
+
+  		select store_num,name,lat,lnt,addr 
+  	    from store_view
+  		  
+  	</select> -->
+  	
+  	<select id="selectAllStore" resultType="kr.co.sist.ssangbang.user.board.domain.AllStoreDomain">
+  		select store_num,name,lat,lnt,addr 
+  	    from store
+  	</select>
+  
+</mapper>
+
