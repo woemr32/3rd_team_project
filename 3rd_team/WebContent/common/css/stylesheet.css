@@ -17,7 +17,7 @@
 	a:hover{ cursor: pointer;}
 	input, select, textarea, button {	vertical-align: middle; }
 	body, th, td, input, select, textarea, button {
-		font-size: 12px;
+		font-size: 13px;
 		font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum,
 			'돋움', sans-serif;
 		color: #222;
@@ -33,12 +33,12 @@
 	
 	.btn {
 		box-sizing: border-box;
-		height:20px;
-		text-align: 20px;
-		background-color: #d0e0ef;
+		height:25px;
+		text-align: 25px;
+		background-color: #e4caa5;
 		border: none;
 		/* border-color: #d0e0ef; */
-		padding: 0 5px;
+		padding: 0 15px;
 	}
 	.btn:hover{
 		cursor: pointer;
@@ -152,7 +152,8 @@
 	/////////////////////////////////////////*/
         #list-component{
             position: fixed;
-            min-width: 460px; height: 100%;
+            /* min-width: 460px; */ 
+            height: 100%;
             top:0px; right:0;
             padding-top: 104px;
             box-shadow: -1px 3px 3px #333;
@@ -162,23 +163,26 @@
         
     #list_close_icon{
         position:absolute;
-        left:-20px; top: 104px;
-            color: #c83649;
-            z-index: 20000;
+        width: 20px; height: 20px;
+        left:-20px; top: 110px;
+        text-align: center;
+        background: url(http://localhost:8080/3rd_team/common/images/icon/20x20_selected_icon_r.png)  no-repeat;
+        z-index: 20000;
     }
     
     
-   .list_header{
+  	#list_header1, #list_header2{
         width: 100%; background-color: #fff;
-        padding: 0 5px;
+        padding: 0 10px;
     }
-	    .list_header:first-child{  
-	        height:40px; line-height: 400px;
-	        border-bottom: 5px solid #f1e2cf; 
+	    #list_header1{  
+	        height:50px; line-height: 50px;
+	        background-color: #c83649;
+	        color: #f1e2cf;
 	    } 
-	    .list_header:nth-child(2){ 
-	        height:30px; line-height:30px; 
-	        background-color: #e4caa5;
+	    #list_header2{ 
+	        height:46px; line-height:46px; 
+	        background-color: #f1e2cf;
 	    }
     
     .list_container{overflow-y: scroll;}

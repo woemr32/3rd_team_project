@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head> 
@@ -43,17 +44,20 @@
         <li class="filters"></li>
         </ul>
     </div><!--div#filter-->
+    
     <div id="content">
     
-<!-- map -->
-		<c:import url="http://localhost:8080/3rd_team/common/map/map.jsp"/>    	
-    	
+	<!-- map -->
         <div id="map-component">
+			<%-- <c:import url="http://localhost:8080/3rd_team/common/map/map.jsp"/> --%>    	
         </div><!-- div#map-component -->
          
         <div id="list-component">
-        	<a href="#"><span id="list_close_icon"><<</span></a>
-            <div class="list_header">>> 검색결과 00건</div>
+        	<span id="list_close_icon"><a href="#"><</a></span>
+        	
+        	<c:import url="http://localhost:8080/3rd_team/calendar.jsp"></c:import>
+            
+            <!-- <div class="list_header">>> 검색결과 00건</div>
             <div class="list_header">식당-한식</div>
              
             <div class="list_container">
@@ -69,7 +73,7 @@
                     <li class="list"><a href='#'>04</a></li>
                     <li class="list"><a href='#'>05</a></li>
                 </ul>
-            </div>
+            </div> -->
             
         </div><!-- div#list-component -->
     </div><!-- div#content -->
