@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+    pageEncoding="EUC-KR"%>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>map</title>
+    <title>Marker Clustering</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map-component'), {
           zoom: 17,
-          center: {lat:37.498155, lnt:127.027621}
+          center: {lat:37.498771, lng:127.030088}
         });
 
 
         
-       var locations = [{lat:37.498155, lnt:127.027621}];
+       var locations = [{lat: 37.498146, lng:127.027578}];
 
  
         // Add some markers to the map.
@@ -41,21 +41,21 @@
 					dataType:"json",
 					error:function(xhr){
 						alert(xhr.status+" / "+ xhr.statusText);
-					},//ì‹¤íŒ¨
+					},//½ÇÆÐ
 					success:function(json_arr){
 						locations=json_arr;
-						markers();
-					}//ì„±ê³µ
+						test();
+					}//¼º°ø
 				});//ajax
    		   
    	   });
       });
       
       
-      function markers(){
+      function test(){
     	  var map = new google.maps.Map(document.getElementById('map-component'), {
               zoom: 17,
-              center: {lat:37.498155, lnt:127.027621}
+              center: {lat:37.498771, lng:127.030088}
             });
     	 alert( locations.length )
    	   var markers = locations.map(function(location, i) {

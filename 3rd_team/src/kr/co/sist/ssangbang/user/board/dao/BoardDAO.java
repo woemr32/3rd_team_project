@@ -1,5 +1,5 @@
 package kr.co.sist.ssangbang.user.board.dao;
 
-public class TestDAO {
+public class BoardDAO {
  
 } // class

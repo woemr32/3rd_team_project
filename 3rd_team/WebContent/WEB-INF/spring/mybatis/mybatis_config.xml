@@ -4,11 +4,11 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd"> 
 <configuration>
 
-	<!-- <mappers>
+	<mappers>
 		<mapper resource="kr/co/sist/ssangbang/user/board/mapper/board_mapper.xml"/>
 		<mapper resource="kr/co/sist/ssangbang/user/comment/mapper/comment_mapper.xml"/>
-		<mapper resource="kr/co/sist/ssangbang/user/calendar/mapper/calendar_mapper.xml"/>
-		<mapper resource="kr/co/sist/ssangbang/user/req/mapper/req_mapper.xml"/>
-	</mappers> -->
+		<!-- <mapper resource="kr/co/sist/ssangbang/user/calendar/mapper/calendar_mapper.xml"/> -->
+		<!-- <mapper resource="kr/co/sist/ssangbang/user/req/mapper/req_mapper.xml"/> -->
+	</mappers>
 
 </configuration>
