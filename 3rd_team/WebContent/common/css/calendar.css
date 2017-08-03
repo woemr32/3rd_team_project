@@ -1,0 +1,104 @@
+@CHARSET "UTF-8";
+
+/*/////////////////////////////////////////
+//          CONTAINER
+/////////////////////////////////////////*/
+/*/////////////////////////////////////////
+//    		CONTENT > LIST
+/////////////////////////////////////////*/
+#list_header1, #list_header2{
+    }
+	    #list_header1{  
+	    } 
+	    #list_header2{ 
+	    }
+	    
+	    #list_header2 > input { margin: 0 5px 0 30px; }
+	    #list_header2 > input:first-child { margin-left: 0px; }
+
+/*/////////////////////////////////////////
+//          CAL_WRAP
+/////////////////////////////////////////*/
+#cal_wrap {
+	width: 560px;
+	height: 100%;
+}
+ 
+
+/*/////////////////////////////////////////
+//          CAL_HEADER
+/////////////////////////////////////////*/
+#cal_header{ 
+	height: ;
+	padding: 40px 0; 
+	}
+	#btn_wrap{ 
+		width:195px; height: 20px; 
+		margin: 0 auto;
+		background-color: #fff;
+		}
+	#btn_wrap > * {display: inline-block;}
+	#prev_btn, #next_btn{
+		font-size : 20px;
+		font-weight: bold;
+		color :  #e4caa5;
+	}
+	.boldDate{ padding: 0 30px; }
+
+/*/////////////////////////////////////////
+//          CAL_CONTENT
+/////////////////////////////////////////*/
+#cal_content{ }
+
+ .boldDate {
+	font-weight: bolder;
+	font-size: 22px;
+	height: 18px;
+	line-height: 18px;
+}
+
+.cal_tab {
+	text-align: center;
+	border-spacing: 0px; /* 0px이면 셀간간격제거 */
+}
+
+.cal_tab, th, td {
+	border: 1px solid #e4caa5;
+}
+
+td {
+	width: 86px; 	height: 90px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.selectedTd {
+	height: 75px; display: block;
+}
+
+.selectedTd:hover {
+	background-color: #e4caa5;
+}
+
+.weekTitle {
+	color: #606479;
+	font-weight: bold;
+	height: 30px;
+}
+
+.weekText {
+	color: #606479;
+	padding: 3px 0 0 3px;
+}
+
+.sunTitle, .sunText { color: #c83649; }
+
+.satTitle, .satText {	color: #55f; }
+
+#todayTd { /* border: 1px solid #D7E2E9; */
+	background-color: #f1e2cf;
+}
+
+.prevMonth, .nextMonth {
+	color: #bbb;
+}
