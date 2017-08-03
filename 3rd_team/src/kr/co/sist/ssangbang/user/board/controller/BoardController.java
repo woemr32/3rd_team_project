@@ -8,17 +8,17 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
 public class BoardController {
-	
+	 
 	@RequestMapping(value="cover.do",method=GET)
 	public String goCover(){
 		
 		
 		return "cover/cover";
-	}//goCover
+	}//goCover 
 	
 	
 	@RequestMapping(value="/index.do",method=GET)
-	public String gomain(){
+	public String goMain(){
 		
 		
 		return "main/index";

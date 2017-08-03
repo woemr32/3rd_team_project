@@ -8,11 +8,6 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
 <title>DataCuration</title>
 <link rel="stylesheet" href="http://localhost:8080/3rd_team/common/css/cover.css">
-<script type="text/javascript">
-	function gogogo(){
-		location.href="truck/truck.do";
-	}
-</script>
 </head>
 <body>
 	<div class="pimg1">
