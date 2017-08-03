@@ -37,11 +37,11 @@
     
     <div id="filter">
         <ul id="filters-list">
-        <li class="filters"></li>
-        <li class="filters"></li>
-        <li class="filters"></li>
-        <li class="filters"></li>
-        <li class="filters"></li>
+        <li class="filters" "value="food"></li>
+        <li class="filters" value="cafe"></li>
+        <li class="filters" value="alcohol"></li>
+        <li class="filters" value="parking"></li>
+        <li class="filters" value="curation"></li>
         </ul>
     </div><!--div#filter-->
     <div id="content">
