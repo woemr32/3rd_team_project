@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head> 
@@ -37,40 +37,26 @@
     
     <div id="filter">
         <ul id="filters-list">
-        <li class="filters" "value="food"></li>
-        <li class="filters" value="cafe"></li>
-        <li class="filters" value="alcohol"></li>
-        <li class="filters" value="parking"></li>
-        <li class="filters" value="curation"></li>
+        <li class="filters"></li>
+        <li class="filters"></li>
+        <li class="filters"></li>
+        <li class="filters"></li>
+        <li class="filters"></li>
         </ul>
     </div><!--div#filter-->
+    
     <div id="content">
     
-<!-- map -->
-		<c:import url="http://localhost:8080/3rd_team/common/map/map.jsp"/>    	
-    	
+	<!-- map -->
         <div id="map-component">
+			<c:import url="http://localhost:8080/3rd_team/common/map/map.jsp"/>    	
         </div><!-- div#map-component -->
-        
+         
         <div id="list-component">
-        	<a href="#"><span id="list_close_icon"><<</span></a>
-            <div class="list_header">>> 검색결과 00건</div>
-            <div class="list_header">식당-한식</div>
-             
-            <div class="list_container">
-                <ul>
-                    <li class="list"><a href='#'>01</a></li>
-                    <li class="list"><a href='#'>02</a></li>
-                    <li class="list"><a href='#'>03</a></li>
-                    <li class="list"><a href='#'>04</a></li>
-                    <li class="list"><a href='#'>05</a></li>
-                    <li class="list"><a href='#'>01</a></li>
-                    <li class="list"><a href='#'>02</a></li>
-                    <li class="list"><a href='#'>03</a></li>
-                    <li class="list"><a href='#'>04</a></li>
-                    <li class="list"><a href='#'>05</a></li>
-                </ul>
-            </div>
+        	<span id="list_close_icon"><a href="#"><</a></span>
+        	
+        	<c:import url="calendar.do"></c:import>
+          
             
         </div><!-- div#list-component -->
     </div><!-- div#content -->

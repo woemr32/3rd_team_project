@@ -1,3 +1,6 @@
+<%@page import="org.springframework.web.context.request.RequestScope"%>
+<%@page import="kr.co.sist.ssangbang.user.calendar.service.CalendarService"%>
+<%@page import="kr.co.sist.ssangbang.user.calendar.dao.CalendarDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.Calendar"%>
@@ -99,22 +102,24 @@
 				return str;
 			}//blockStr() %>
 				
-				
+			
+			
+							
 			<%
 				/* 요일별 글자색 */
 				String textColor = "";
 				String todayCss = "";
 				String memo = "";
 
-				/* //년, 월에 해당하는 모든 이벤트 조회
-				CalendarDAO cd = CalendarDAO.getInstance();
+				/*  //년, 월에 해당하는 모든 이벤트 조회
+				CalendarDAO cd = CalendarDAO.getInstance(); */
 
-				// 해당 년월의 모든 이벤트 조회하여 저장하기 위한 Map
+				/* // 해당 년월의 모든 이벤트 조회하여 저장하기 위한 Map
 				Map<String, List<CalTitleVO>> evtMap = cd.selectMonthEvent(String.valueOf(nowYear),
 									String.valueOf(nowMonth));
 
 				// 해당일자로 조회된 이벤트들을 저장하기 위한 List
-				List<CalTitleVO> evtList = null; */ 
+				List<CalTitleVO> evtList = null;   */
 
 				///////////////////////////////////////////////////////////////////////
 				for (int tempDay = 1;; tempDay++) {
@@ -202,7 +207,11 @@
 						<span class="<%=textColor%>"><%=tempDay%>&nbsp/&nbsp</span>
 					</a><span class="memo"><%=memo%></span>
 					<div>
-						
+						<c:if test="${ empty month_event }">이벤트없음</c:if>
+						<c:forEach var="event" items="${ requestScope.month_event }">
+							<c:out value="${event.title}"/> 
+							<c:out value="${event.content}"/> 
+						</c:forEach>
 					</div>
 				</td>
 

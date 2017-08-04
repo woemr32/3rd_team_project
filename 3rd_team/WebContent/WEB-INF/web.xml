@@ -41,7 +41,7 @@
 	  </filter>
 	  <filter-mapping>
 	  	<filter-name>cef</filter-name>
-	  	<url-pattern>*.do</url-pattern>
+	  	<url-pattern>/*</url-pattern>
 	  </filter-mapping>
 	
 
