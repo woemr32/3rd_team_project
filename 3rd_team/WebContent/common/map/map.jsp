@@ -9,12 +9,12 @@
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map-component'), {
           zoom: 17,
-          center: {lat:37.498771, lng:127.030088}
+          center: {lat: 37.498180, lng:127.027589}
         });
 
 
         
-       var locations = [{lat: 37.498146, lng:127.027578}];
+       var locations = [{lat: 37.498180, lng:127.027589}];
 
  
         // Add some markers to the map.
@@ -34,9 +34,9 @@
       }
       var locations;
       $(function(){
-   	   $("#btn").click(function(){
+   	   $("#filter").click(function(){
    		   $.ajax({
-					url:"map_cluster.jsp",
+					url:"marker_cluster.jsp",
 					type:"get",
 					dataType:"json",
 					error:function(xhr){
@@ -44,7 +44,7 @@
 					},//실패
 					success:function(json_arr){
 						locations=json_arr;
-						test();
+						view_marker_clusters();
 					}//성공
 				});//ajax
    		   
@@ -52,10 +52,10 @@
       });
       
       
-      function test(){
+      function view_marker_clusters(){
     	  var map = new google.maps.Map(document.getElementById('map-component'), {
               zoom: 17,
-              center: {lat:37.498771, lng:127.030088}
+              center: {lat: 37.498180, lng:127.027589}
             });
     	 alert( locations.length )
    	   var markers = locations.map(function(location, i) {
