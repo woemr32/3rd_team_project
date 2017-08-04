@@ -15,12 +15,12 @@ import kr.co.sist.ssangbang.user.board.domain.AllStoreDomain;
 public class BoardService {
 	
 	
-	@Autowired(required=false)
+	@Autowired
 	private BoardDAO b_dao;
 	
 	public String allStore(){
 		
-		System.out.println(b_dao+"===========b_dao");
+		System.out.println("===========b_dao==="+b_dao);
 		
 		String allStore="";
 		
@@ -33,7 +33,10 @@ public class BoardService {
 			list=b_dao.selectAllStore();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		}//catch
+		
+		System.out.println(list);
+		
 		AllStoreDomain storeDomain=null;
 		
 		for( int i=0; i<list.size(); i++){

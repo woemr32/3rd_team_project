@@ -27,7 +27,6 @@
 </head>
 <body>
 
-
 <div id="list_header1">일정관리</div>
 <div id="list_header2">
 

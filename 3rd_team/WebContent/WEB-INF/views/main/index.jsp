@@ -47,9 +47,10 @@
     
     <div id="content">
     
-	<!-- map -->
+<!-- map -->
+		<c:import url="http://localhost:8080/3rd_team/map/map.jsp"/>    	
+    	
         <div id="map-component">
-			<c:import url="http://localhost:8080/3rd_team/common/map/map.jsp"/>    	
         </div><!-- div#map-component -->
          
         <div id="list-component">
