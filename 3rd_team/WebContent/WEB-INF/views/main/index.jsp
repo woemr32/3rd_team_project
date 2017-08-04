@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head> 
@@ -15,7 +16,7 @@
 
 </head>
 <body>
-<div id="wrap"> 
+<div id="wrap">  
     
 <div id="header">
     <div id="logo"><a href="#"><img alt="쌍방로고" title="쌍방메인" src="http://localhost:8080/3rd_team/common/images/main/logo_168x60.png"/></a></div>
@@ -36,11 +37,11 @@
     
     <div id="filter">
         <ul id="filters-list">
-        <li class="filters" "value="food"></li>
-        <li class="filters" value="cafe"></li>
+        <li class="filters" value="food"></li>
+        <li class="filters" value="cafe"></li> 
         <li class="filters" value="alcohol"></li>
         <li class="filters" value="parking"></li>
-        <li class="filters" value="curation"></li>
+        <li class="filters" value="curation"></li> 
         </ul>
     </div><!--div#filter-->
     <div id="content">
