@@ -14,7 +14,7 @@
 
 
         
-       var locations = [{lat: 37.498180, lng:127.027589}];
+       var locations = [{lat: 37.498180, lng:127.027589}]; 
 
  
         // Add some markers to the map.
