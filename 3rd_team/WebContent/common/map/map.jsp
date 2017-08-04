@@ -37,7 +37,7 @@
    	   $("#filter").click(function(){
    		   $.ajax({
    			   
-					url:"marker_cluster.jsp",
+					url:"marker_cluster.do",
 					type:"get",
 					dataType:"json",
 					error:function(xhr){

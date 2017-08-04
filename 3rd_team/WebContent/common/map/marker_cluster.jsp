@@ -1,7 +1,8 @@
 <%@ page import="kr.co.sist.ssangbang.user.board.service.BoardService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%-- <%
 	
 	//서비스 객체 생성
 	BoardService b_service=new BoardService();
@@ -13,5 +14,7 @@
 	
 	out.print(markers);
 	
-%>
-<%= markers %>
+%> --%>
+
+<c:out value="${ requestScope.map_cluster }"/>
+
