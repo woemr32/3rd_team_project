@@ -37,36 +37,25 @@
     
     <div id="filter">
         <ul id="filters-list">
-<<<<<<< HEAD
-        <li class="filters"></li>
-        <li class="filters"></li>
-        <li class="filters"></li>
-        <li class="filters"></li>
-        <li class="filters"></li>
-=======
         <li class="filters" value="food"></li>
         <li class="filters" value="cafe"></li> 
         <li class="filters" value="alcohol"></li>
         <li class="filters" value="parking"></li>
         <li class="filters" value="curation"></li> 
->>>>>>> refs/heads/master
         </ul>
     </div><!--div#filter-->
     
     <div id="content">
     
 <!-- map -->
-		<c:import url="http://localhost:8080/3rd_team/map/map.jsp"/>    	
     	
         <div id="map-component">
+		<c:import url="http://localhost:8080/3rd_team/map/map.jsp"/>    	
         </div><!-- div#map-component -->
          
         <div id="list-component">
         	<span id="list_close_icon"><a href="#"><</a></span>
-        	
         	<c:import url="calendar.do"></c:import>
-          
-            
         </div><!-- div#list-component -->
     </div><!-- div#content -->
 </div><!-- div#container -->

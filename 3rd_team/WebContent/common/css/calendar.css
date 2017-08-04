@@ -30,7 +30,7 @@
 /////////////////////////////////////////*/
 #cal_header{ 
 	height: ;
-	padding: 40px 0; 
+	padding: 50px 0; 
 	}
 	#btn_wrap{ 
 		width:195px; height: 20px; 
@@ -43,26 +43,36 @@
 		font-weight: bold;
 		color :  #e4caa5;
 	}
-	.boldDate{ padding: 0 30px; }
+	 .boldDate {
+	font-weight: bolder;
+	font-size: 22px;
+	height: 18px;
+	line-height: 18px;
+	padding: 0 30px;
+}
+	
 
 /*/////////////////////////////////////////
 //          CAL_CONTENT
 /////////////////////////////////////////*/
 #cal_content{ }
 
- .boldDate {
-	font-weight: bolder;
-	font-size: 22px;
-	height: 18px;
-	line-height: 18px;
+
+#tab_nav{
+	padding: 10px 0;
 }
 
+
+
+/*/////////////////////////////////////////
+//          CAL_TAB
+/////////////////////////////////////////*/
 .cal_tab {
 	text-align: center;
 	border-spacing: 0px; /* 0px이면 셀간간격제거 */
 }
 
-.cal_tab, th, td {
+#cal_tab, th, td {
 	border: 1px solid #e4caa5;
 }
 

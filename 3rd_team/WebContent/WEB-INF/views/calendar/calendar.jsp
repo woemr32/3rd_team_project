@@ -1,3 +1,4 @@
+<%@page import="java.awt.Event"%>
 <%@page import="org.springframework.web.context.request.RequestScope"%>
 <%@page import="kr.co.sist.ssangbang.user.calendar.service.CalendarService"%>
 <%@page import="kr.co.sist.ssangbang.user.calendar.dao.CalendarDAO"%>
@@ -12,17 +13,13 @@
 <head>
 <meta charset="UTF-8">
 <title>CALENDAR</title>
-<link href="http://localhost:8080/3rd_team/common/css/stylesheet.css"
-	type="text/css" rel="stylesheet" />
-	<link href="http://localhost:8080/3rd_team/common/css/calendar.css"
-	type="text/css" rel="stylesheet" />
+<link href="http://localhost:8080/3rd_team/common/css/stylesheet.css"	type="text/css" rel="stylesheet" />
+<link href="http://localhost:8080/3rd_team/common/css/calendar.css" type="text/css" rel="stylesheet" />
 <style type="text/css"></style>
-<script type="text/javascript"
-	src="http://localhost:8080/3rd_team/common/js/jquery-1.12.0.js"></script>
-<script type="text/javascript"
-	src="http://localhost:8080/3rd_team/common/js/jquery-migrate-1.2.1.js"></script>
-<script type="text/javascript"
-	src="http://localhost:8080/3rd_team/common/js/attach_list_component.js"></script>
+<script type="text/javascript"	src="http://localhost:8080/3rd_team/common/js/jquery-1.12.0.js"></script>
+<script type="text/javascript"	src="http://localhost:8080/3rd_team/common/js/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript"	src="http://localhost:8080/3rd_team/common/js/attach_list_component.js"></script>
+<script type="text/javascript"	src="http://localhost:8080/3rd_team/common/js/calendar.js"></script>
 <style type="text/css"></style>
 </head>
 <body>
@@ -64,22 +61,24 @@
 	%>
 	<div id="cal_header">
 		<div id="btn_wrap">
-			<a href="#" id="prev_btn">&lt</a>
+			<a href="calendar.do?param_month=<%=nowMonth == 1 ? 12 : nowMonth - 1%>&param_year=<%=nowMonth == 1 ? nowYear - 1 : nowYear%>"id="prev_btn">&lt</a>
 			<span class="boldDate"><%=nowYear%>.<%=nowMonth%></span> 
-			<a href="#" id="next_btn">&gt</a> 
-			<a href="index.jsp" id="today_btn">오늘</a>
+			<a href="calendar.do?param_month=<%=nowMonth == 12 ? 1 : nowMonth + 1%>	&param_year=<%=nowMonth == 12 ? nowYear + 1 : nowYear%>" id="next_btn">&gt</a> 
+			<a href="calendar.do" id="today_btn">오늘</a>
 		</div><!-- btn_wrap -->
 	</div><!-- div#cal_header -->
 	
 	
 	<div id="cal_content">
+	
 		<div id="tab_nav">
 			<img src="http://localhost:8080/3rd_team/common/images/icon/15x15_sand_watch_icon.png"><span>예약</span>
 			<img src="http://localhost:8080/3rd_team/common/images/icon/15x15_sand_watch_icon.png"><span>식당</span>
 			<img src="http://localhost:8080/3rd_team/common/images/icon/15x15_sand_watch_icon.png"><span>카페</span>
 			<img src="http://localhost:8080/3rd_team/common/images/icon/15x15_sand_watch_icon.png"><span>술</span>
 		</div><!-- div#tab_nav -->
-		<table id="cal_tab" border="1">
+		
+		<table id="cal_tab" >
 			<tr>
 				<th class="weekTitle sunTitle">일</th>
 				<th class="weekTitle">월</th>
@@ -91,34 +90,12 @@
 			</tr>
 				
 			<!-- 스크립트릿은 로컬에 생성되기 때문에, static변수를 쓰려면 declaration에 작성해야함. -->
-			<%! public static final int START_DAY = 1;
-
-			//10자 이상의 글자를 10자 까지만 잘라서 '.' 을 붙이는 일
-			public String blockStr(String str) {
-				if (str != null && str.length() > 11) {
-					str = str.substring(0, 10) + "..";
-				} //end if	
-				return str;
-			}//blockStr() %>
-				
-			
-			
-							
+			<%! public static final int START_DAY = 1;%>
 			<%
 				/* 요일별 글자색 */
 				String textColor = "";
 				String todayCss = "";
 				String memo = "";
-
-				/*  //년, 월에 해당하는 모든 이벤트 조회
-				CalendarDAO cd = CalendarDAO.getInstance(); */
-
-				/* // 해당 년월의 모든 이벤트 조회하여 저장하기 위한 Map
-				Map<String, List<CalTitleVO>> evtMap = cd.selectMonthEvent(String.valueOf(nowYear),
-									String.valueOf(nowMonth));
-
-				// 해당일자로 조회된 이벤트들을 저장하기 위한 List
-				List<CalTitleVO> evtList = null;   */
 
 				///////////////////////////////////////////////////////////////////////
 				for (int tempDay = 1;; tempDay++) {
@@ -196,22 +173,31 @@
 						todayCss = " id='todayTd'";
 						memo = "TODAY";
 					} //end if
-
-					// 해당 일의 모든 글을 List에 저장
-					/* evtList = evtMap.get(String.valueOf(tempDay)); */
 				%>
+				
 				<!-- table td에 날짜뿌리기 -->
 				<td <%=todayCss%>>
-					<a href="#void" <%-- onclick="writeEvt(<%=evtList.size()%>, --%> '<%=nowYear%>' , '<%=nowMonth%>', '<%=tempDay%>' )">
+				
+					<a href="#void" onclick="writeEvt('<%=nowYear%>' , '<%=nowMonth%>', '<%=tempDay%>' )">
 						<span class="<%=textColor%>"><%=tempDay%>&nbsp/&nbsp</span>
 					</a><span class="memo"><%=memo%></span>
-					<div>
+					
+					<div style="line-height: 15px;">
 						<c:if test="${ empty month_event }">이벤트없음</c:if>
 						<c:forEach var="event" items="${ requestScope.month_event }">
-							<c:out value="${event.title}"/> 
-							<c:out value="${event.content}"/> 
+							<a href="#void" onclick="readEvt('<%=nowYear%>', '<%=nowMonth%>', '<%=tempDay%>')" >
+								<c:if test="${ event.reserve  eq 'N' }">
+									<img src="http://localhost:8080/3rd_team/common/images/icon/rose_logo_gray_100x100.png" title="${ event.title }"/>
+								</c:if>
+								<c:if test="${ event.reserve  eq 'Y' }">
+									<img src="http://localhost:8080/3rd_team/common/images/icon/rose_logo_100x100.png" title="${ event.title }"/>
+								</c:if>
+							</a>
+							<%-- <c:out value="${event.content}"/> --%>
+							
 						</c:forEach>
-					</div>
+					</div><!-- div icon -->
+					
 				</td>
 
 				<%
@@ -230,5 +216,12 @@
 		
 		
 	</div><!-- div#cal_wrap -->
+	
+	<c:if test="${ param.pageFlag ne null }">
+		<div id="hidFrm">
+			<!-- parameter에 .jsp를 넣어주거나, 이곳에 .jsp를 붙여주어야 함.  -->
+		<c:import url="${ param.pageFlag }" />
+		</div>
+		</c:if>
 </body>
 </html>

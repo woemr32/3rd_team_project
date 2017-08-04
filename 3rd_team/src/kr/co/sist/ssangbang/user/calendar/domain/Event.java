@@ -1,15 +1,26 @@
 package kr.co.sist.ssangbang.user.calendar.domain;
 
 public class Event {
-	private String title, content;
+	private int day;
+	private String title, content, reserve;
 
 	public Event() {
 	}
 
-	public Event(String title, String content) {
+	public Event(int day, String title, String content, String reserve) {
 		super();
+		this.day = day;
 		this.title = title;
 		this.content = content;
+		this.reserve = reserve;
+	}
+
+	public int getDay() {
+		return day;
+	}
+
+	public void setDay(int day) {
+		this.day = day;
 	}
 
 	public String getTitle() {
@@ -28,4 +39,13 @@ public class Event {
 		this.content = content;
 	}
 
+	public String getReserve() {
+		return reserve;
+	}
+
+	public void setReserve(String reserve) {
+		this.reserve = reserve;
+	}
+
+	
 } // class
