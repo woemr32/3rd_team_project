@@ -16,6 +16,10 @@ import kr.co.sist.ssangbang.user.board.service.BoardService;
 @Component
 public class BoardDAO {
 	
+	public BoardDAO() {
+		System.out.println("BoardDAO»ý¼º==================");
+	}
+	
 	
 	@Autowired(required=false)
 	private SqlSessionTemplate sst;
@@ -23,8 +27,8 @@ public class BoardDAO {
 	
 	public List<AllStoreDomain> selectAllStore() throws SQLException{
 		
-		//System.out.println(sst+"======sst");
-		System.out.println("======sst");
+		System.out.println(sst+"======sst");
+//		System.out.println("======sst");
 		
 		List<AllStoreDomain> list=sst.selectList("selectAllStore");
 		

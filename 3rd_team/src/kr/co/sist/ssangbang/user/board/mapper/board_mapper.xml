@@ -9,6 +9,15 @@
   		select store_num,name,lat,lnt,addr 
   	    from store_view
   		  
+<<<<<<< HEAD
+=======
+  	</select> -->
+  	
+  	<select id="selectAllStore" resultType="kr.co.sist.ssangbang.user.board.domain.AllStoreDomain">
+  		select store_num,name,lat,lnt,addr 
+  	    from store_view
+  	    where store_num='라이브카페'
+>>>>>>> refs/heads/jaeho
   	</select>
   	
 </mapper>
