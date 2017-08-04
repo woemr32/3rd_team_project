@@ -36,10 +36,12 @@
       $(function(){
    	   $("#filter").click(function(){
    		   $.ajax({
+   			   
 					url:"marker_cluster.jsp",
 					type:"get",
 					dataType:"json",
 					error:function(xhr){
+   			  		 alert(json)
 						alert(xhr.status+" / "+ xhr.statusText);
 					},//½ÇÆÐ
 					success:function(json_arr){
