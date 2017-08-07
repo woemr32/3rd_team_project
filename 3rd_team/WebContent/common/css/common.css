@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+/*/////////////////////////////////////////
+//              초기화
+/////////////////////////////////////////*/
+	*{ 
+	    margin: 0; padding: 0; box-sizing: border-box; 
+	}
+	body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code,
+		form, fieldset, legend, textarea, p, th, td, input, select, button {
+		margin: 0px;	padding: 0px;
+	}
+	fieldset, img {	border: 0 none; }
+	li{ list-style: none; }
+	a{ text-decoration: none; color: #111; display: inline-block; }
+	a:hover{ cursor: pointer;}
+	input, select, textarea, button {	vertical-align: middle; }
+	body, th, td, input, select, textarea, button {
+		font-size: 13px;
+		font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum,
+			'나눔고딕', sans-serif;
+		color: #222;
+		letter-spacing: -1px
+	}
+
+
+	.inputBox {
+		border: 1px solid #111;
+		height:20px;     
+	    padding-left: 5px;  
+	}
+	
+	.btn {
+		box-sizing: border-box;
+		height:25px;
+		text-align: 25px;
+		background-color: #e4caa5;
+		border: none;
+		/* border-color: #d0e0ef; */
+		padding: 0 15px;
+	}
+	.btn:hover{
+		cursor: pointer;
+	}
+
+
