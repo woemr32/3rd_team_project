@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/*
+ This css is part of the blue/style.css theme, shown as an example
+ To work with the zebra widget, include the .odd and .even color definitions as well
+ as definitions for the "primary", "secondary" and "tertiary" sorts.
+*/
+/* Column Widget - column sort colors */
+table.tablesorter-blue td.primary, table.tablesorter-blue tr.odd td.primary
+	{
+	background-color: #99b3e6;
+}
+
+table.tablesorter-blue tr.even td.primary {
+	background-color: #c2d1f0;
+}
+
+table.tablesorter-blue td.secondary, table.tablesorter-blue tr.odd td.secondary
+	{
+	background-color: #c2d1f0;
+}
+
+table.tablesorter-blue tr.even td.secondary {
+	background-color: #d6e0f5;
+}
+
+table.tablesorter-blue td.tertiary, table.tablesorter-blue tr.odd td.tertiary
+	{
+	background-color: #d6e0f5;
+}
+
+table.tablesorter-blue tr.even td.tertiary {
+	background-color: #ebf0fa;
+}

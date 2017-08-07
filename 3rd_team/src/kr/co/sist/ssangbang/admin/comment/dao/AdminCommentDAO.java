@@ -18,4 +18,14 @@ public class AdminCommentDAO {
 		list=sst.selectList("selectAllReview");
 		return list;
 	}//selectAllReview
-}
+	
+	public int deleteReview(String del_review_num){
+		int cnt=0;
+		
+		cnt=sst.delete("deleteReview", del_review_num);
+		
+		System.out.println("DAO : "+ del_review_num);
+		return cnt;
+	}//deleteReview
+	
+}//AdminCommentDAO

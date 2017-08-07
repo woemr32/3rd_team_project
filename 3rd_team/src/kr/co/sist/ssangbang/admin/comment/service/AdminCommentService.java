@@ -19,4 +19,18 @@ public class AdminCommentService {
 			return list;
 		}//selectAllReview 
 
+		public boolean deleteReview(String del_review_num){
+			boolean flag=false;
+			int cnt=0;
+			cnt=ac_dao.deleteReview( del_review_num);
+			System.out.println("Service : "+ del_review_num);
+			
+			if(cnt!=0){
+				flag=true;
+			}
+			
+			return flag;
+			
+		}//deleteReview 
+		
 }//AdminCommentService

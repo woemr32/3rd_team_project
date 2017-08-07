@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+
+    /*/////////////////////////
+    //   CONTAINER > CONTENT
+    //////////////////////////*/
+    #content_wrap{
+        width: 100%; height:100%;
+        margin-top: 2px;
+        padding-left: 202px;
+    }
+    #content{
+        padding-top: 50px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+
+    /* 각자 */
+    #content table{
+        width:100%; text-align: center;
+    }
+    #content #del_btn{
+    }
+

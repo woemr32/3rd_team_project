@@ -10,5 +10,10 @@
   	  	ORDER BY REVIEW_NUM
   	</select>
   	
+  	<delete id="deleteReview" parameterType="String" >
+  		DELETE FROM REVIEW 
+  		WHERE REVIEW_NUM=#{del_review_num, jdbcType=VARCHAR}
+  	</delete>
+  	
 </mapper>
 

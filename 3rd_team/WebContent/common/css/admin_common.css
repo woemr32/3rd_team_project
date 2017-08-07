@@ -5,7 +5,7 @@
 //      WRAP
 //////////////////////////*/
 #wrap{
-    background-color: #fffbf3;
+    /* background-color: #fffbf3; */
 }
 
 /*/////////////////////////
@@ -107,9 +107,9 @@
     }
     #content{
         padding-top: 50px;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
-        background-color: beige;
+        /* background-color: beige; */
     }
     
 
